@@ -1,7 +1,7 @@
 export default `<!DOCTYPE html><html lang="en" data-beasties-container><head>
   <meta charset="utf-8">
   <title>AngularCv</title>
-  <base href="/">
+  <base href="/cv-joseg/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style type="text/css" id="fa-auto-css">:root, :host {
   --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";

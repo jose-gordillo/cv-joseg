@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/',
+  basePath: '/cv-joseg',
   supportedLocales: {
   "en-US": ""
 },
