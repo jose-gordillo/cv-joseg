@@ -1,0 +1,71 @@
+<nav class="fixed top-0 left-0 h-full md:w-28 bg-[#0f0f0f] text-gray-100 px-4 py-8 shadow flex flex-col items-center border-r border-[#0f0f0f] z-50">
+  
+  <div class="w-full flex justify-center items-center mb-0 md:mb-0">
+    <!-- Botón hamburguesa (solo visible en pantallas pequeñas) -->
+    <button (click)="isMenuOpen = !isMenuOpen" class="md:hidden text-white text-xl">
+      <fa-icon [icon]="faBars"></fa-icon>
+    </button>
+  </div>
+
+  <!-- Contenedor del menú centrado -->
+  <div class="flex-1 flex flex-col justify-center w-full">
+    <ul
+      class="flex flex-col space-y-4 font-semibold w-full  text-center"
+      [ngClass]="{
+        'hidden': !isMenuOpen,
+        'flex flex-col items-center': isMenuOpen,
+        'md:flex md:flex-col md:space-y-6': true
+      }"
+    >
+      <li>
+        <a href="#home"
+           class="flex flex-col items-center hover:text-primary transition-colors duration-200"
+           [class.text-primary]="activeSection === 'home'">
+          <fa-icon [icon]="faHome" class="text-xl"></fa-icon>
+          <span class="hidden md:block text-sm">Inicio</span>
+        </a>
+      </li>
+      <li>
+        <a href="#about"
+           class="flex flex-col items-center  hover:text-primary transition-colors duration-200"
+           [class.text-primary]="activeSection === 'about'">
+          <fa-icon [icon]="faUser" class="text-xl"></fa-icon>
+          <span class="hidden md:block text-sm">Sobre mí</span>
+        </a>
+      </li>
+      <li>
+        <a href="#experience"
+           class="flex flex-col items-center  hover:text-primary transition-colors duration-200"
+           [class.text-primary]="activeSection === 'experience'">
+          <fa-icon [icon]="faClipboard" class="text-xl"></fa-icon>
+          <span class="hidden md:block text-sm">Experiencia</span>
+        </a>
+      </li>
+      <li>
+        <a href="#projects"
+           class="flex flex-col items-center  hover:text-primary transition-colors duration-200"
+           [class.text-primary]="activeSection === 'projects'">
+          <fa-icon [icon]="faBriefcase" class="text-xl"></fa-icon>
+          <span class="hidden md:block text-sm">Proyectos</span>
+        </a>
+      </li>
+            <li>
+        <a href="#educacion"
+           class="flex flex-col items-center hover:text-primary transition-colors duration-200"
+           [class.text-primary]="activeSection === 'educacion'">
+          <fa-icon [icon]="faUserg" class="text-xl"></fa-icon>
+          <span class="hidden md:block text-sm">Educación</span>
+        </a>
+      </li>
+      <li>
+        <a href="#contact"
+           class="flex flex-col items-center hover:text-primary transition-colors duration-200"
+           [class.text-primary]="activeSection === 'contact'">
+          <fa-icon [icon]="faEnvelope" class="text-xl"></fa-icon>
+          <span class="hidden md:block text-sm">Contacto</span>
+        </a>
+      </li>
+    
+    </ul>
+  </div>
+</nav>
